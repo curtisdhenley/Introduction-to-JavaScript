@@ -19,7 +19,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+  
+if (votingAge >= 18) {
+  console.log('You can vote!', 'task 1 a:')
+}
 
 
 /*
@@ -32,8 +36,13 @@ Do the following:
 
    HINT: no function required
 */
+let num1 = 5;
+let num2 = 6;
 
-
+if (num2 >= num1) {
+  return num1 + 5;
+}
+console.log(num1);
 
 
 
@@ -47,7 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let a = "1999";
+let b = parseInt(a);
+console.log(parseInt(a))
 
 
 
@@ -59,11 +70,10 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
-
+console.log(multiply(3, 7));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,9 +86,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+
+function dogYears(humanYears){
+  return humanYears * 7;
 }
+  console.log(dogYears(3));
 
 
 
@@ -109,8 +121,22 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (age >= 1 && weight <= 5) {
+    return weight * 0.05;
+  } else if (age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  } else if (age >= 1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  } else if (age >= 1 && weight > 15){
+    return weight * 0.02;
+  } else if (age < 1 && age >= 0.583){
+    return weight * 0.04;
+  } else if (age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  } else if (age < 0.333){
+    return weight * 0.1;
+  }
 }
 
 
@@ -135,10 +161,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
+const computer = Math.random();
+const user = Math.random();
+function game(user, computer) {
   /*add your code here*/
-}
+    if (computer < 0.25 ){
+      return 'Rock';
+    } else if (computer <= 0.5) {
+      return 'Paper';
+    } else if (computer <= 1) {
+      return 'Scissors';
+    } else if (user < 0.25 ){
+      return 'Rock';
+    } else if (user <= 0.5) {
+      return 'Paper';
+    } else if (user <= 1) {
+      return 'Scissors'; 
+    } else if (user == 'Rock' && computer == 'Scissors' || user == 'Scissors' && computer == 'Paper' || user == 'Paper' && computer == 'Rock') {
+      return 'you win!';
+    } else if (computer == 'Rock' && user == 'Scissors' || computer == 'Scissors' && user == 'Paper' || computer == 'Paper' && user == 'Rock') {
+      return 'you lose!';
+    } else if (user == 'Rock' && computer == 'Rock' || user == 'Scissors' && computer == 'Scissors' || user == 'Paper' && computer == 'Paper') {
+      return 'it\'s a tie!'
+    }
+  }
+
+  console.log(game('Rock', coomputer));
 
 
 
@@ -152,10 +200,15 @@ Using the miles function below do the following:
 2. Convert the number of kiolmeters received to miles
 3. Return the number of miles
 */
+let kilometers = Math.random;
 
-function miles(/*add your code here*/){
+function miles(kilometers){
   /*add your code here*/
+  if (kilometers > 0) {
+  return kilometers * 0.621371;
+  }
 }
+console.log(miles(3))
 
 
 
@@ -166,10 +219,15 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
+let centimeters = Math.random();
 
-function feet(/*add your code here*/){
+function feet(centimeters){
   /*add your code here*/
+  if (centimeters > 0) {
+    return centimeters * 0.0328084;
+  }
 }
+console.log(feet(7));
 
 
 
@@ -183,8 +241,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+
+function annoyingSong(soda){
       /*add your code here*/
+      for (let i = 99; i < 100; i--) {
+        console.log(soda[i])
+      }
 }
 
 
