@@ -22,7 +22,9 @@ Do the following:
 let votingAge = 18
   
 if (votingAge >= 18) {
-  console.log('You can vote!', 'task 1 a:')
+  console.log(true, 'task 1 a:');
+} else {
+  console.log(false);
 }
 
 
@@ -36,13 +38,14 @@ Do the following:
 
    HINT: no function required
 */
-let num1 = 5;
-let num2 = 6;
+let state = "Florida";
+let weather = "cold";
 
-if (num2 >= num1) {
-  return num1 + 5;
+if (weather === "cold") {
+  state = "New York";
 }
-console.log(num1);
+console.log(state)
+
 
 
 
@@ -56,10 +59,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-let a = "1999";
-let b = parseInt(a);
-console.log(parseInt(a))
 
+let year = "1999";
+console.log(Number("1999"));
 
 
 /*
@@ -70,7 +72,7 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-function multiply(a, b){
+function multiply(a, b) {
   return a * b;
 }
 console.log(multiply(3, 7));
@@ -124,17 +126,17 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 function hungryDog(weight, age){
   if (age >= 1 && weight <= 5) {
     return weight * 0.05;
-  } else if (age >= 1 && weight >= 6 && weight <= 10){
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
     return weight * 0.04;
-  } else if (age >= 1 && weight >= 11 && weight <= 15){
+  } else if (age >= 1 && weight >= 11 && weight <= 15) {
     return weight * 0.03;
-  } else if (age >= 1 && weight > 15){
+  } else if (age >= 1 && weight > 15) {
     return weight * 0.02;
-  } else if (age < 1 && age >= 0.583){
+  } else if (age < 1 && age >= 0.583) {
     return weight * 0.04;
-  } else if (age < 0.583 && age >= 0.333){
+  } else if (age < 0.583 && age >= 0.333) {
     return weight * 0.05;
-  } else if (age < 0.333){
+  } else if (age < 0.333) {
     return weight * 0.1;
   }
 }
@@ -162,31 +164,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 const computer = Math.random();
-const user = Math.random();
+
 function game(user, computer) {
   /*add your code here*/
-    if (computer < 0.25 ){
-      return 'Rock';
-    } else if (computer <= 0.5) {
-      return 'Paper';
-    } else if (computer <= 1) {
-      return 'Scissors';
-    } else if (user < 0.25 ){
-      return 'Rock';
-    } else if (user <= 0.5) {
-      return 'Paper';
-    } else if (user <= 1) {
-      return 'Scissors'; 
-    } else if (user == 'Rock' && computer == 'Scissors' || user == 'Scissors' && computer == 'Paper' || user == 'Paper' && computer == 'Rock') {
-      return 'you win!';
-    } else if (computer == 'Rock' && user == 'Scissors' || computer == 'Scissors' && user == 'Paper' || computer == 'Paper' && user == 'Rock') {
-      return 'you lose!';
-    } else if (user == 'Rock' && computer == 'Rock' || user == 'Scissors' && computer == 'Scissors' || user == 'Paper' && computer == 'Paper') {
-      return 'it\'s a tie!'
-    }
+    // if (computer < 0.25 ){
+    //   return 'Rock';
+    // } else if (computer <= 0.5) {
+    //   return 'Paper';
+    // } else if (computer <= 1) {
+    //   return 'Scissors';
+    // } else if (user < 0.25 ){
+    //   return 'Rock';
+    // } else if (user <= 0.5) {
+    //   return 'Paper';
+    // } else if (user <= 1) {
+    //   return 'Scissors'; 
+    // } else if (user == 'Rock' && computer == 'Scissors' || user == 'Scissors' && computer == 'Paper' || user == 'Paper' && computer == 'Rock') {
+    //   return 'you win!';
+    // } else if (computer == 'Rock' && user == 'Scissors' || computer == 'Scissors' && user == 'Paper' || computer == 'Paper' && user == 'Rock') {
+    //   return 'you lose!';
+    // } else if (user == 'Rock' && computer == 'Rock' || user == 'Scissors' && computer == 'Scissors' || user == 'Paper' && computer == 'Paper') {
+    //   return 'it\'s a tie!'
+    // }
   }
 
-  console.log(game('Rock', coomputer));
+  console.log(game('Rock', computer));
 
 
 
@@ -200,7 +202,7 @@ Using the miles function below do the following:
 2. Convert the number of kiolmeters received to miles
 3. Return the number of miles
 */
-let kilometers = Math.random;
+let kilometers = Math.random();
 
 function miles(kilometers){
   /*add your code here*/
